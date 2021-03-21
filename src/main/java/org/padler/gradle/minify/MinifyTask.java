@@ -1,6 +1,5 @@
 package org.padler.gradle.minify;
 
-import org.gradle.api.GradleException;
 import org.gradle.api.tasks.TaskAction;
 import org.padler.gradle.minify.minifier.CssMinifier;
 import org.padler.gradle.minify.minifier.JsMinifier;
@@ -29,8 +28,7 @@ public class MinifyTask extends MinifyTaskBase {
             minifier.minify(srcDir, dstDir);
         }
 
-        throw new GradleException("Gradle Minify Plugin is deprecated\n" +
-                "please use https://github.com/gradle-webtools/gradle-minify-plugin instead.");
+        //throw new GradleException("Gradle Minify Plugin is deprecated\n" + "please use https://github.com/gradle-webtools/gradle-minify-plugin instead.");
     }
 
     private CssMinifier createCSSMinifier() {

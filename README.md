@@ -14,12 +14,17 @@ A simple gradle plugin to minify CSS and JavaScript files.
 Uses [Google Closure Compiler](https://github.com/google/closure-compiler) and [Google Closure Stylesheets
 ](https://github.com/google/closure-stylesheets) for minification.
 
+# Changelogs
+
+* Updated on Mar 21 to run minify tasks without Exception
+* Upgrade closure-compiler to v20210302
+
 # Getting started
 
 ### Gradle
 ```groovy
 plugins {
-  id "org.padler.gradle.minify" version "1.8.0"
+  id "org.padler.gradle.minify" version "1.8.1"
 }
 ```
 

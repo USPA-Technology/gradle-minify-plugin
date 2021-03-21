@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "org.padler.gradle.minify"
-version = "1.8.0"
+version = "1.8.1"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -54,7 +54,7 @@ dependencies {
     implementation("com.google.auto.value:auto-value-annotations:1.7.4")
 
     // https://mvnrepository.com/artifact/com.google.javascript/closure-compiler
-    implementation("com.google.javascript:closure-compiler:v20200920")
+    implementation("com.google.javascript:closure-compiler:v20210302")
 
     implementation("org.padler:closure-stylesheets:1.6.0")
 

@@ -1,16 +1,22 @@
 package org.padler.gradle.minify.minifier;
 
-import com.google.common.collect.ImmutableList;
-import com.google.javascript.jscomp.*;
-import org.padler.gradle.minify.minifier.options.JSMinifierOptions;
-import org.padler.gradle.minify.minifier.result.Error;
-import org.padler.gradle.minify.minifier.result.Warning;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Collections;
 import java.util.List;
+
+import org.padler.gradle.minify.minifier.options.JSMinifierOptions;
+import org.padler.gradle.minify.minifier.result.Error;
+import org.padler.gradle.minify.minifier.result.Warning;
+
+import com.google.common.collect.ImmutableList;
+import com.google.javascript.jscomp.AbstractCommandLineRunner;
+import com.google.javascript.jscomp.CommandLineRunner;
+import com.google.javascript.jscomp.CompilerOptions;
+import com.google.javascript.jscomp.JSError;
+import com.google.javascript.jscomp.Result;
+import com.google.javascript.jscomp.SourceFile;
 
 public class JsMinifier extends Minifier {
 
@@ -98,7 +104,7 @@ public class JsMinifier extends Minifier {
         options.setProcessCommonJSModules(minifierOptions.getProcessCommonJsModules());
         options.setPackageJsonEntryNames(minifierOptions.getPackageJsonEntryNames());
         options.setAngularPass(minifierOptions.getAngularPass());
-        options.setDartPass(minifierOptions.getDartPass());
+        //options.setDartPass(minifierOptions.getDartPass());
         options.setForceLibraryInjection(minifierOptions.getForceInjectLibrary());
         options.setPolymerVersion(minifierOptions.getPolymerVersion());
         options.setRewritePolyfills(minifierOptions.getRewritePolyfills());

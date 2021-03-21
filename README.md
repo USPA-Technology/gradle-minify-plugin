@@ -31,14 +31,15 @@ plugins {
 #### Legacy plugin application
 ```groovy
 buildscript {
-  repositories {
-    maven {
-      url "https://plugins.gradle.org/m2/"
-    }
-  }
-  dependencies {
-    classpath "gradle.plugin.org.padler.gradle.minify:gradle-minify-plugin:1.8.0"
-  }
+	repositories {
+    		maven {
+      		url "https://plugins.gradle.org/m2/"
+    		}
+    		mavenLocal()
+  	}
+  	dependencies {
+    	classpath "org.padler.gradle.minify:gradle-minify-plugin:1.8.1"
+  	}
 }
 
 apply plugin: "org.padler.gradle.minify"

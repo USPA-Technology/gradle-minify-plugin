@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "org.padler.gradle.minify"
-version = "1.8.1"
+version = "1.8.2"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -51,12 +51,15 @@ repositories {
 
 dependencies {
     // https://mvnrepository.com/artifact/com.google.auto.value/auto-value-annotations
-    implementation("com.google.auto.value:auto-value-annotations:1.7.4")
+    implementation("com.google.auto.value:auto-value-annotations:1.7.5")
+    
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation("com.google.guava:guava:31.0.1-jre")
 
     // https://mvnrepository.com/artifact/com.google.javascript/closure-compiler
-    implementation("com.google.javascript:closure-compiler:v20210302")
+    implementation("com.google.javascript:closure-compiler:v20220104")
 
-    implementation("org.padler:closure-stylesheets:1.6.0")
+    implementation("org.padler:closure-stylesheets:1.6.3")
 
     // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter
     testImplementation("org.junit.jupiter:junit-jupiter:5.7.0")
